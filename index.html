@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Sample Layout: Restaurant Website (Menu, Ordering, Catering)</title>
+<style>
+:root{--ink:#231f1c;--muted:#6b625a;--brand:#7a2e1f;--accent:#c98a2b;--bg:#faf6f0;--line:#e8dfd3}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+h1,h2,h3,.logo{font-family:Georgia,"Times New Roman",serif;font-weight:normal}
+.banner{background:#ffd900;color:#000;text-align:center;font-weight:700;padding:10px 14px;font-size:15px;position:sticky;top:0;z-index:10}
+.ph{background:#fff3b0;border:1px dashed #b38f00;padding:0 4px;border-radius:3px;color:#000;font-weight:600;font-size:.92em;font-family:system-ui,sans-serif}
+header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;padding:18px 7%;border-bottom:1px solid var(--line)}
+.logo{font-size:24px;color:var(--brand)}
+nav a{margin-left:20px;color:var(--ink);text-decoration:none;font-size:15px}
+nav a.order{background:var(--brand);color:#fff;padding:8px 16px;border-radius:999px}
+.imgph{border-radius:12px;background:repeating-linear-gradient(45deg,#eadfce,#eadfce 12px,#f4ece0 12px,#f4ece0 24px);display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);font-weight:600;padding:20px}
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;padding:72px 7%;background:var(--bg)}
+.hero h1{font-size:44px;line-height:1.15;margin:0 0 16px}
+.hero p{font-size:19px;color:var(--muted);margin:0;max-width:540px}
+.hero .imgph{aspect-ratio:4/3}
+.btn{display:inline-block;background:var(--brand);color:#fff;font-weight:600;padding:12px 24px;border-radius:999px;text-decoration:none;margin:26px 10px 0 0;font-size:15px}
+.btn.alt{background:#fff;color:var(--brand);border:2px solid var(--brand)}
+section{padding:64px 7%}section.soft{background:var(--bg)}
+h2{font-size:32px;margin:0 0 6px}.sub{color:var(--muted);margin:0 0 30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px}.card h3{margin:4px 0 6px;font-size:20px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}.two .imgph{aspect-ratio:4/3}
+.menu-cat{margin-bottom:28px}.menu-cat h3{font-size:22px;border-bottom:2px solid var(--accent);display:inline-block;margin:0 0 12px}
+.item{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px dotted var(--line)}
+.item small{display:block;color:var(--muted)}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}.tabs span{border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:14px;background:#fff}.tabs span.on{background:var(--ink);color:#fff}
+.note{font-size:14px;color:var(--muted);margin-top:14px}
+footer{padding:26px 7%;color:var(--muted);font-size:13px;border-top:1px solid var(--line);text-align:center}
+@media(max-width:820px){.hero,.two{grid-template-columns:1fr}.hero h1{font-size:32px}nav a:not(.order){display:none}}
+</style>
+</head>
+<body>
+<div class="banner">Sample layout only. Not a live site. Restaurant name, menu, prices, photos and wording are placeholders to be replaced with the owner's real information.</div>
+<header><div class="logo"><span class="ph">[Restaurant Name]</span></div>
+<nav><a href="#about">About</a><a href="#menu">Menu</a><a href="#catering">Catering</a><a href="#visit">Visit</a><a class="order" href="#order">Order online</a></nav></header>
+
+<div class="hero">
+<div><p style="margin:0 0 8px"><span class="ph">Suggested headline, yours to change</span></p>
+<h1><span class="ph">[Cuisine]</span> made fresh, for dine-in, pickup and catering.</h1>
+<p><span class="ph">[One-sentence description of the restaurant, in the owner's words]</span></p>
+<a class="btn" href="#order">Order online</a><a class="btn alt" href="#menu">See the menu</a></div>
+<div class="imgph">[Placeholder: hero photo of a signature dish or the dining room]</div>
+</div>
+
+<section id="about">
+<div class="two">
+<div class="imgph">[Placeholder: owner, chef or storefront photo]</div>
+<div><h2>About us</h2><p class="sub">A short story page: who runs it, what you cook, why people come back.</p>
+<p><span class="ph">[Owner's story, 2–3 short paragraphs]</span></p>
+<p><span class="ph">[What makes the food different: recipes, ingredients, family history]</span></p></div>
+</div></section>
+
+<section id="menu" class="soft">
+<h2>Menu</h2><p class="sub">Built as real text (not a PDF) so it reads well on phones and shows up in Google. Easy to edit in WordPress.</p>
+<div class="tabs"><span class="on">All</span><span><span class="ph">[Category 1]</span></span><span><span class="ph">[Category 2]</span></span><span><span class="ph">[Category 3]</span></span></div>
+<div class="grid">
+<div class="menu-cat"><h3><span class="ph">[Category 1]</span></h3>
+<div class="item"><div><span class="ph">[Dish name]</span><small><span class="ph">[Short description]</span></small></div><div><span class="ph">[$ price]</span></div></div>
+<div class="item"><div><span class="ph">[Dish name]</span><small><span class="ph">[Short description]</span></small></div><div><span class="ph">[$ price]</span></div></div>
+<div class="item"><div><span class="ph">[Dish name]</span><small><span class="ph">[Short description]</span></small></div><div><span class="ph">[$ price]</span></div></div></div>
+<div class="menu-cat"><h3><span class="ph">[Category 2]</span></h3>
+<div class="item"><div><span class="ph">[Dish name]</span><small><span class="ph">[Short description]</span></small></div><div><span class="ph">[$ price]</span></div></div>
+<div class="item"><div><span class="ph">[Dish name]</span><small><span class="ph">[Short description]</span></small></div><div><span class="ph">[$ price]</span></div></div>
+<div class="item"><div><span class="ph">[Dish name]</span><small><span class="ph">[Short description]</span></small></div><div><span class="ph">[$ price]</span></div></div></div>
+</div></section>
+
+<section id="order">
+<h2>Order online</h2><p class="sub">One clear button on every page, linking to the ordering system the restaurant already uses.</p>
+<div class="grid">
+<div class="card"><h3>Pickup</h3><p><span class="ph">[Link to existing online ordering, e.g. Toast, Square or ChowNow]</span></p></div>
+<div class="card"><h3>Delivery</h3><p><span class="ph">[Links to delivery apps the restaurant uses, if any]</span></p></div>
+<div class="card"><h3>Hours</h3><p><span class="ph">[Opening hours by day]</span></p></div>
+</div>
+<p class="note">Full in-site ordering with a cart and payments is a separate add-on, quoted before starting.</p></section>
+
+<section id="catering" class="soft">
+<div class="two">
+<div><h2>Catering</h2><p class="sub">A page that answers the usual questions and collects the request in one form.</p>
+<div class="card"><p><strong>Catering request form (sample fields):</strong> event date, number of guests, pickup or delivery, menu interests, notes.</p>
+<p><span class="ph">[Catering packages or trays, with sizes and prices]</span></p>
+<p class="note">Form submissions go to the restaurant's own inbox. Nothing is listed here in the sample.</p></div></div>
+<div class="imgph">[Placeholder: catering tray or event photo]</div>
+</div></section>
+
+<section id="visit">
+<h2>Visit</h2><p class="sub">Location, hours, parking and an embedded map.</p>
+<div class="grid">
+<div class="card"><h3>Find us</h3><p><span class="ph">[Street address]</span></p></div>
+<div class="card"><h3>Hours</h3><p><span class="ph">[Hours by day]</span></p></div>
+<div class="card"><h3>Get in touch</h3><p><span class="ph">[Restaurant's own contact details and social links]</span></p></div>
+</div>
+<div class="imgph" style="margin-top:22px;aspect-ratio:16/5">[Placeholder: embedded Google Map]</div></section>
+
+<footer>Sample layout for discussion only. Not affiliated with or published by any restaurant.</footer>
+</body></html>
